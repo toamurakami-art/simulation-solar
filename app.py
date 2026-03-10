@@ -375,7 +375,7 @@ if demand_file:
             if results['Status'] == 'Infeasible':
                 # 💡 遊び心2: エラー（解なし）になった時のジョーの台詞
                 st.error("❌ 【解なし】指定された制約条件が厳しすぎます。")
-                st.warning("「燃えたよ…真っ白に…燃え尽きた…真っ白な灰に…」—— AIが計算の限界を超えて力尽きました。サイドバーの条件を少し緩めて再度お試しください。")
+                st.warning("「燃え尽きたよ…真っ白に…灰に…」—— AIが計算の限界を超えて力尽きました。サイドバーの条件を少し緩めて再度お試しください。")
             elif results['Status'] == 'Optimal':
                 st.markdown("---")
                 opt_pv = results['Optimal_PV_kW']
