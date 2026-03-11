@@ -271,7 +271,7 @@ with col1:
     demand_file = st.file_uploader("1. デマンドデータ (Excel/CSV) ※必須", type=['xlsx', 'xls', 'csv'])
 with col2:
     # 💡 ツールチップ（はてなマーク）でヒントを隠して画面をスッキリに！
-    pv_files = st.file_uploader("2. 発電量データ (CSV) ※任意", type=['csv'], accept_multiple_files=True, help="空欄でもOK！過去の気象データに基づく「高精度・標準発電モデル」が自動適用され、正確に計算されます。")
+    pv_files = st.file_uploader("2. 発電量データ (CSV) ※任意", type=['csv'], accept_multiple_files=True, help="空欄でもOK！過去の発電データに基づく「高精度・標準発電モデル」が自動適用され、正確に計算されます。")
 
 if demand_file:
     with st.spinner('データを抽出しています...'):
@@ -416,7 +416,7 @@ if demand_file:
                 om_cost = capex_gross * params['om_rate']
                 pcs_cost = capex_gross * params['pcs_rate']
                 disp_cost = capex_gross * params['disp_rate']
-                disp_year = min(params['years'], 30)
+                disp_year = 30 # 
                 
                 cf_gross, cf_net, cum_gross, cum_net = [], [], 0, 0
                 cf_summary = []
