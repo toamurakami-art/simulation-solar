@@ -179,7 +179,7 @@ def optimize_system(df, params):
 # ==========================================
 # 3. UI設定 (Streamlit)
 # ==========================================
-st.set_page_config(page_title="最適容量シミュレーター", layout="wide")
+st.set_page_config(page_title="最適容量シミュレーターv5.8", layout="wide")
 st.title("🌱 再エネ・蓄電池 最適容量シミュレーター")
 
 with st.sidebar:
@@ -596,3 +596,4 @@ if demand_file:
 
             else:
                 st.error("最適化中に予期せぬエラーが発生しました。条件を見直してください。")
+
