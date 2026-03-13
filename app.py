@@ -4,7 +4,7 @@ import pulp
 import random  # 💡 遊び心（ランダム機能）用の部品
 
 # ==========================================
-# 🎁 究極完全版 v6.1: 項目名省略なし ＋ ズレ絶対防止 ＋ 緑矢印
+# 🎁 究極完全版 v7.4: パワコン交換を11年目・21年目に修正
 # ==========================================
 PV_PROFILE = {"1":{"0":{"0":0.0,"30":0.0},"1":{"0":0.0,"30":0.0},"2":{"0":0.0,"30":0.0},"3":{"0":0.0,"30":0.0},"4":{"0":0.0,"30":0.0},"5":{"0":0.0,"30":0.0},"6":{"0":0.0,"30":0.0},"7":{"0":0.0061,"30":0.0365},"8":{"0":0.1186,"30":0.1608},"9":{"0":0.1946,"30":0.2156},"10":{"0":0.214,"30":0.2111},"11":{"0":0.1965,"30":0.1863},"12":{"0":0.185,"30":0.1863},"13":{"0":0.1798,"30":0.1751},"14":{"0":0.1634,"30":0.1445},"15":{"0":0.1144,"30":0.0616},"16":{"0":0.0238,"30":0.0016},"17":{"0":0.0,"30":0.0},"18":{"0":0.0,"30":0.0},"19":{"0":0.0,"30":0.0},"20":{"0":0.0,"30":0.0},"21":{"0":0.0,"30":0.0},"22":{"0":0.0,"30":0.0},"23":{"0":0.0,"30":0.0}},"2":{"0":{"0":0.0,"30":0.0},"1":{"0":0.0,"30":0.0},"2":{"0":0.0,"30":0.0},"3":{"0":0.0,"30":0.0},"4":{"0":0.0,"30":0.0},"5":{"0":0.0,"30":0.0},"6":{"0":0.0,"30":0.0078},"7":{"0":0.0574,"30":0.1268},"8":{"0":0.1946,"30":0.2279},"9":{"0":0.2484,"30":0.2586},"10":{"0":0.2526,"30":0.2465},"11":{"0":0.2296,"30":0.2153},"12":{"0":0.2157,"30":0.2206},"13":{"0":0.2177,"30":0.2221},"14":{"0":0.2133,"30":0.1978},"15":{"0":0.1708,"30":0.1333},"16":{"0":0.0938,"30":0.0282},"17":{"0":0.006,"30":0.0},"18":{"0":0.0,"30":0.0},"19":{"0":0.0,"30":0.0},"20":{"0":0.0,"30":0.0},"21":{"0":0.0,"30":0.0},"22":{"0":0.0,"30":0.0},"23":{"0":0.0,"30":0.0}},"3":{"0":{"0":0.0,"30":0.0},"1":{"0":0.0,"30":0.0},"2":{"0":0.0,"30":0.0},"3":{"0":0.0,"30":0.0},"4":{"0":0.0,"30":0.0},"5":{"0":0.0,"30":0.0019},"6":{"0":0.0225,"30":0.0685},"7":{"0":0.1444,"30":0.1905},"8":{"0":0.2252,"30":0.2471},"9":{"0":0.2583,"30":0.2626},"10":{"0":0.2556,"30":0.249},"11":{"0":0.2352,"30":0.2222},"12":{"0":0.2274,"30":0.2355},"13":{"0":0.2366,"30":0.2416},"14":{"0":0.2357,"30":0.2142},"15":{"0":0.1985,"30":0.1748},"16":{"0":0.1411,"30":0.0895},"17":{"0":0.0515,"30":0.0106},"18":{"0":0.0,"30":0.0},"19":{"0":0.0,"30":0.0},"20":{"0":0.0,"30":0.0},"21":{"0":0.0,"30":0.0},"22":{"0":0.0,"30":0.0},"23":{"0":0.0,"30":0.0}},"4":{"0":{"0":0.0,"30":0.0},"1":{"0":0.0,"30":0.0},"2":{"0":0.0,"30":0.0},"3":{"0":0.0,"30":0.0},"4":{"0":0.0,"30":0.0003},"5":{"0":0.0098,"30":0.0346},"6":{"0":0.0923,"30":0.1263},"7":{"0":0.1572,"30":0.1759},"8":{"0":0.1927,"30":0.2018},"9":{"0":0.2013,"30":0.1969},"10":{"0":0.1852,"30":0.1739},"11":{"0":0.1573,"30":0.145},"12":{"0":0.1513,"30":0.1607},"13":{"0":0.1748,"30":0.1873},"14":{"0":0.1911,"30":0.1901},"15":{"0":0.1758,"30":0.158},"16":{"0":0.1403,"30":0.1152},"17":{"0":0.0892,"30":0.0347},"18":{"0":0.0108,"30":0.0},"19":{"0":0.0,"30":0.0},"20":{"0":0.0,"30":0.0},"21":{"0":0.0,"30":0.0},"22":{"0":0.0,"30":0.0},"23":{"0":0.0,"30":0.0}},"5":{"0":{"0":0.0,"30":0.0},"1":{"0":0.0,"30":0.0},"2":{"0":0.0,"30":0.0},"3":{"0":0.0,"30":0.0},"4":{"0":0.0004,"30":0.0094},"5":{"0":0.0535,"30":0.0813},"6":{"0":0.116,"30":0.1373},"7":{"0":0.1556,"30":0.1673},"8":{"0":0.1756,"30":0.1799},"9":{"0":0.1811,"30":0.1786},"10":{"0":0.1683,"30":0.1556},"11":{"0":0.1396,"30":0.1302},"12":{"0":0.1344,"30":0.1468},"13":{"0":0.159,"30":0.1702},"14":{"0":0.1727,"30":0.1715},"15":{"0":0.1683,"30":0.1569},"16":{"0":0.1439,"30":0.1293},"17":{"0":0.1108,"30":0.0809},"18":{"0":0.0423,"30":0.0076},"19":{"0":0.0,"30":0.0},"20":{"0":0.0,"30":0.0},"21":{"0":0.0,"30":0.0},"22":{"0":0.0,"30":0.0},"23":{"0":0.0,"30":0.0}},"6":{"0":{"0":0.0,"30":0.0},"1":{"0":0.0,"30":0.0},"2":{"0":0.0,"30":0.0},"3":{"0":0.0,"30":0.0},"4":{"0":0.002,"30":0.0089},"5":{"0":0.0383,"30":0.055},"6":{"0":0.0767,"30":0.0928},"7":{"0":0.1108,"30":0.1248},"8":{"0":0.1383,"30":0.1476},"9":{"0":0.1565,"30":0.161},"10":{"0":0.1547,"30":0.1458},"11":{"0":0.1348,"30":0.1264},"12":{"0":0.1305,"30":0.1409},"13":{"0":0.148,"30":0.1524},"14":{"0":0.1529,"30":0.1512},"15":{"0":0.1474,"30":0.1368},"16":{"0":0.1308,"30":0.1131},"17":{"0":0.0946,"30":0.0668},"18":{"0":0.048,"30":0.0132},"19":{"0":0.0042,"30":0.0},"20":{"0":0.0,"30":0.0},"21":{"0":0.0,"30":0.0},"22":{"0":0.0,"30":0.0},"23":{"0":0.0,"30":0.0}},"7":{"0":{"0":0.0,"30":0.0},"1":{"0":0.0,"30":0.0},"2":{"0":0.0,"30":0.0},"3":{"0":0.0,"30":0.0},"4":{"0":0.0001,"30":0.0039},"5":{"0":0.0261,"30":0.0378},"6":{"0":0.0574,"30":0.0728},"7":{"0":0.0911,"30":0.1044},"8":{"0":0.1224,"30":0.1337},"9":{"0":0.1418,"30":0.1452},"10":{"0":0.1435,"30":0.1386},"11":{"0":0.1316,"30":0.1231},"12":{"0":0.1261,"30":0.1357},"13":{"0":0.1444,"30":0.1498},"14":{"0":0.1507,"30":0.1498},"15":{"0":0.1512,"30":0.1417},"16":{"0":0.132,"30":0.1067},"17":{"0":0.0908,"30":0.0623},"18":{"0":0.0449,"30":0.012},"19":{"0":0.0041,"30":0.0},"20":{"0":0.0,"30":0.0},"21":{"0":0.0,"30":0.0},"22":{"0":0.0,"30":0.0},"23":{"0":0.0,"30":0.0}},"8":{"0":{"0":0.0,"30":0.0},"1":{"0":0.0,"30":0.0},"2":{"0":0.0,"30":0.0},"3":{"0":0.0,"30":0.0},"4":{"0":0.0,"30":0.0006},"5":{"0":0.0107,"30":0.0279},"6":{"0":0.055,"30":0.0728},"7":{"0":0.0945,"30":0.109},"8":{"0":0.1296,"30":0.1435},"9":{"0":0.1527,"30":0.157},"10":{"0":0.1548,"30":0.1486},"11":{"0":0.1374,"30":0.1274},"12":{"0":0.1286,"30":0.1324},"13":{"0":0.1409,"30":0.1448},"14":{"0":0.1485,"30":0.1488},"15":{"0":0.1401,"30":0.1276},"16":{"0":0.1115,"30":0.0947},"17":{"0":0.0777,"30":0.0493},"18":{"0":0.0248,"30":0.0035},"19":{"0":0.0,"30":0.0},"20":{"0":0.0,"30":0.0},"21":{"0":0.0,"30":0.0},"22":{"0":0.0,"30":0.0},"23":{"0":0.0,"30":0.0}},"9":{"0":{"0":0.0,"30":0.0},"1":{"0":0.0,"30":0.0},"2":{"0":0.0,"30":0.0},"3":{"0":0.0,"30":0.0},"4":{"0":0.0,"30":0.0},"5":{"0":0.0001,"30":0.0105},"6":{"0":0.0536,"30":0.0878},"7":{"0":0.1222,"30":0.1433},"8":{"0":0.1621,"30":0.1727},"9":{"0":0.1688,"30":0.1635},"10":{"0":0.1554,"30":0.1454},"11":{"0":0.1316,"30":0.1263},"12":{"0":0.1296,"30":0.133},"13":{"0":0.1408,"30":0.1428},"14":{"0":0.1442,"30":0.1387},"15":{"0":0.1266,"30":0.1052},"16":{"0":0.0875,"30":0.0586},"17":{"0":0.0298,"30":0.0064},"18":{"0":0.0011,"30":0.0},"19":{"0":0.0,"30":0.0},"20":{"0":0.0,"30":0.0},"21":{"0":0.0,"30":0.0},"22":{"0":0.0,"30":0.0},"23":{"0":0.0,"30":0.0}},"10":{"0":{"0":0.0,"30":0.0},"1":{"0":0.0,"30":0.0},"2":{"0":0.0,"30":0.0},"3":{"0":0.0,"30":0.0},"4":{"0":0.0,"30":0.0},"5":{"0":0.0,"30":0.0002},"6":{"0":0.015,"30":0.0592},"7":{"0":0.1208,"30":0.1456},"8":{"0":0.1645,"30":0.1736},"9":{"0":0.1762,"30":0.1727},"10":{"0":0.161,"30":0.149},"11":{"0":0.1313,"30":0.1286},"12":{"0":0.1333,"30":0.1373},"13":{"0":0.1523,"30":0.1631},"14":{"0":0.1527,"30":0.1393},"15":{"0":0.1248,"30":0.0977},"16":{"0":0.0643,"30":0.0154},"17":{"0":0.0019,"30":0.0},"18":{"0":0.0,"30":0.0},"19":{"0":0.0,"30":0.0},"20":{"0":0.0,"30":0.0},"21":{"0":0.0,"30":0.0},"22":{"0":0.0,"30":0.0},"23":{"0":0.0,"30":0.0}},"11":{"0":{"0":0.0,"30":0.0},"1":{"0":0.0,"30":0.0},"2":{"0":0.0,"30":0.0},"3":{"0":0.0,"30":0.0},"4":{"0":0.0,"30":0.0},"5":{"0":0.0,"30":0.0},"6":{"0":0.0,"30":0.0072},"7":{"0":0.0444,"30":0.101},"8":{"0":0.139,"30":0.1562},"9":{"0":0.1626,"30":0.1623},"10":{"0":0.153,"30":0.143},"11":{"0":0.1284,"30":0.128},"12":{"0":0.128,"30":0.1276},"13":{"0":0.1279,"30":0.1261},"14":{"0":0.1132,"30":0.0946},"15":{"0":0.0725,"30":0.026},"16":{"0":0.0085,"30":0.0},"17":{"0":0.0,"30":0.0},"18":{"0":0.0,"30":0.0},"19":{"0":0.0,"30":0.0},"20":{"0":0.0,"30":0.0},"21":{"0":0.0,"30":0.0},"22":{"0":0.0,"30":0.0},"23":{"0":0.0,"30":0.0}},"12":{"0":{"0":0.0,"30":0.0},"1":{"0":0.0,"30":0.0},"2":{"0":0.0,"30":0.0},"3":{"0":0.0,"30":0.0},"4":{"0":0.0,"30":0.0},"5":{"0":0.0,"30":0.0},"6":{"0":0.0,"30":0.0},"7":{"0":0.009,"30":0.0406},"8":{"0":0.106,"30":0.136},"9":{"0":0.155,"30":0.1677},"10":{"0":0.1667,"30":0.1633},"11":{"0":0.1529,"30":0.1509},"12":{"0":0.153,"30":0.154},"13":{"0":0.146,"30":0.1385},"14":{"0":0.1252,"30":0.1021},"15":{"0":0.079,"30":0.0198},"16":{"0":0.0012,"30":0.0},"17":{"0":0.0,"30":0.0},"18":{"0":0.0,"30":0.0},"19":{"0":0.0,"30":0.0},"20":{"0":0.0,"30":0.0},"21":{"0":0.0,"30":0.0},"22":{"0":0.0,"30":0.0},"23":{"0":0.0,"30":0.0}}}
 
@@ -27,6 +27,7 @@ def get_template_csv():
     return df_template.to_csv(index=False, encoding='utf-8-sig').encode('utf-8-sig')
 
 def calc_depreciation_200db(cost, years):
+    is_ratio = (cost <= 1.0)
     if years == 1: return [cost] + [0] * 29 
     tax_rates = { 7: {'r': 0.286, 'r_rev': 0.334, 'g': 0.07115}, 10: {'r': 0.200, 'r_rev': 0.250, 'g': 0.06552}, 17: {'r': 0.118, 'r_rev': 0.125, 'g': 0.04648} }
     rates = tax_rates.get(years, {'r': 2.0/years, 'r_rev': 2.0/years, 'g': 0})
@@ -41,8 +42,8 @@ def calc_depreciation_200db(cost, years):
                     switched, revised_cost = True, balance
                     d = revised_cost * rates['r_rev']
             else: d = revised_cost * rates['r_rev']
-            if y == years: d = balance - 1
-            if d > balance: d = balance - 1
+            if y == years: d = balance if is_ratio else balance - 1
+            if d > balance: d = balance if is_ratio else balance - 1
             deps.append(d)
             balance -= d
         else: deps.append(0)
@@ -73,7 +74,6 @@ def read_csv_robust(file, header_val=None):
 # 2. 最適化エンジン (PuLP)
 # ==========================================
 def optimize_system(df, params):
-    Y = params['years']
     T = len(df)
     
     demand_list = [float(x) if pd.notna(x) and x not in [float('inf'), float('-inf')] else 0.0 for x in df['Demand_kWh']]
@@ -91,82 +91,81 @@ def optimize_system(df, params):
     
     capex = params['cost_pv_net'] * X_pv + params['cost_bat_net'] * X_bat
     price_unit = params['price_base'] + params['adj_fuel'] + params['surcharge']
-    opex_energy = Y * pulp.lpSum([price_unit * E_buy[t] for t in range(T)])
+    
+    annual_gen_1kw = sum(pv_gen_list)
+    e_buy_yr1_expr = pulp.lpSum([E_buy[t] for t in range(T)])
+    e_discharge_yr1_expr = pulp.lpSum([E_discharge[t] for t in range(T)])
+    
+    opex_energy_30y = 0
+    for y in range(1, 31):
+        deg_pv = annual_gen_1kw * X_pv * 0.004 * (y - 1)
+        deg_bat = e_discharge_yr1_expr * params['bat_deg_rate'] * (y - 1)
+        opex_y = e_buy_yr1_expr * price_unit + (deg_pv + deg_bat) * price_unit
+        opex_energy_30y += opex_y
     
     capex_gross_var = params['cost_pv_gross'] * X_pv + params['cost_bat_gross'] * X_bat
-    om_total = Y * capex_gross_var * params['om_rate']
-    pcs_total = capex_gross_var * params['pcs_rate'] if Y >= params['pcs_year'] else 0
+    om_total = 30 * capex_gross_var * params['om_rate']
     disp_total = capex_gross_var * params['disp_rate']
     
-    prob += capex + opex_energy + om_total + pcs_total + disp_total
+    # 💡 パワコン交換を 11年目・21年目 と想定して計算
+    pcs_total = (X_pv * 10000) * 2
+    
+    prob += capex + opex_energy_30y + om_total + pcs_total + disp_total
+    
     eta_c, eta_d = params['eff_charge'], params['eff_discharge']
     
-    if params.get('fix_pv_kw') is not None:
-        prob += X_pv == params['fix_pv_kw']
-        
-    if params.get('fix_bat_kwh') is not None:
-        prob += X_bat == params['fix_bat_kwh']
-        
-    if params.get('max_capex_man') is not None:
-        prob += capex <= params['max_capex_man'] * 10000
+    if params.get('fix_pv_kw') is not None: prob += X_pv == params['fix_pv_kw']
+    if params.get('fix_bat_kwh') is not None: prob += X_bat == params['fix_bat_kwh']
+    if params.get('max_capex_man') is not None: prob += capex <= params['max_capex_man'] * 10000
 
     annual_demand_kwh = sum(demand_list)
     base_cost_yr1 = annual_demand_kwh * price_unit
 
     if params.get('min_reduction_rate') is not None:
-        target_opex_yr1_rate = base_cost_yr1 * (1.0 - params['min_reduction_rate'] / 100.0)
-        prob += pulp.lpSum([price_unit * E_buy[t] for t in range(T)]) <= target_opex_yr1_rate
+        prob += e_buy_yr1_expr * price_unit <= base_cost_yr1 * (1.0 - params['min_reduction_rate'] / 100.0)
 
     if params.get('min_reduction_amount_man') is not None:
-        target_opex_yr1_amount = base_cost_yr1 - (params['min_reduction_amount_man'] * 10000)
-        prob += pulp.lpSum([price_unit * E_buy[t] for t in range(T)]) <= target_opex_yr1_amount
+        prob += e_buy_yr1_expr * price_unit <= base_cost_yr1 - (params['min_reduction_amount_man'] * 10000)
 
-    if params.get('max_payback_years') is not None:
-        target_year = int(params['max_payback_years'])
-        dep_fracs = calc_depreciation_200db(1.0, params['dep_years'])
-        total_savings = 0
-        total_cost = 0
-        total_tax_shield = 0
-        annual_gen_1kw = sum(pv_gen_list)
-        capex_n = params['cost_pv_net'] * X_pv + params['cost_bat_net'] * X_bat
-        capex_g = params['cost_pv_gross'] * X_pv + params['cost_bat_gross'] * X_bat
-        cost_with_pv_yr1 = pulp.lpSum([price_unit * E_buy[t] for t in range(T)])
-        savings_yr1_expr = base_cost_yr1 - cost_with_pv_yr1
+    target_year = params['target_payback']
+    dep_fracs = calc_depreciation_200db(1.0, params['dep_years'])
+    total_savings, total_cost, total_tax_shield = 0, 0, 0
+    capex_n = params['cost_pv_net'] * X_pv + params['cost_bat_net'] * X_bat
+    capex_g = params['cost_pv_gross'] * X_pv + params['cost_bat_gross'] * X_bat
+    savings_yr1_expr = base_cost_yr1 - e_buy_yr1_expr * price_unit
+    
+    for y in range(1, target_year + 1):
+        deg_loss_pv = annual_gen_1kw * X_pv * 0.004 * (y - 1)
+        deg_loss_bat = e_discharge_yr1_expr * params['bat_deg_rate'] * (y - 1)
+        savings_y = savings_yr1_expr - (deg_loss_pv + deg_loss_bat) * price_unit
+        total_savings += savings_y
         
-        for y in range(1, target_year + 1):
-            deg_loss_kwh = annual_gen_1kw * X_pv * 0.004 * (y - 1)
-            savings_y = savings_yr1_expr - deg_loss_kwh * price_unit
-            total_savings += savings_y
-            cost_y = capex_g * params['om_rate']
-            if y == params['pcs_year']: cost_y += capex_g * params['pcs_rate']
-            if y == min(params['years'], 30): cost_y += capex_g * params['disp_rate']
-            total_cost += cost_y
-            dep_y = dep_fracs[y-1] * capex_n
-            tax_shield_y = (dep_y + cost_y) * params['tax_rate']
-            total_tax_shield += tax_shield_y
-        prob += (total_savings - total_cost + total_tax_shield) >= capex_n
+        cost_y = capex_g * params['om_rate']
+        # 💡 パワコン交換を 11年目・21年目 に修正！
+        if y in [11, 21]: cost_y += X_pv * 10000
+        total_cost += cost_y
+        
+        dep_y = dep_fracs[y-1] * capex_n
+        tax_shield_y = (dep_y + cost_y) * params['tax_rate']
+        total_tax_shield += tax_shield_y
+        
+    prob += (total_savings - total_cost + total_tax_shield) >= capex_n
 
     if params.get('max_loss_rate') is not None:
-        total_pv_gen_expr = sum(pv_gen_list) * X_pv
+        total_pv_gen_expr = annual_gen_1kw * X_pv
         total_pv_used_expr = pulp.lpSum([E_pv_use[t] + E_charge[t] for t in range(T)])
-        required_use_ratio = 1.0 - (params['max_loss_rate'] / 100.0)
-        prob += total_pv_used_expr >= total_pv_gen_expr * required_use_ratio
+        prob += total_pv_used_expr >= total_pv_gen_expr * (1.0 - params['max_loss_rate'] / 100.0)
 
     for t in range(T):
         prob += demand_list[t] == E_pv_use[t] + E_discharge[t] + E_buy[t]
         prob += E_pv_use[t] + E_charge[t] <= pv_gen_list[t] * X_pv
-        
         prob += S[t] >= X_bat * 0.10
         prob += S[t] <= X_bat * 0.95
-
         max_kw = X_bat * 0.5
         prob += E_charge[t] <= max_kw * 0.5
         prob += E_discharge[t] <= max_kw * 0.5
-
-        if t == 0:
-            prob += S[t] == (X_bat * 0.10) + E_charge[t] * eta_c - (E_discharge[t] / eta_d)
-        else:
-            prob += S[t] == S[t-1] + E_charge[t] * eta_c - (E_discharge[t] / eta_d)
+        if t == 0: prob += S[t] == (X_bat * 0.10) + E_charge[t] * eta_c - (E_discharge[t] / eta_d)
+        else: prob += S[t] == S[t-1] + E_charge[t] * eta_c - (E_discharge[t] / eta_d)
         
     prob.solve(pulp.PULP_CBC_CMD(msg=0))
     return {
@@ -179,7 +178,7 @@ def optimize_system(df, params):
 # ==========================================
 # 3. UI設定 (Streamlit)
 # ==========================================
-st.set_page_config(page_title="最適容量シミュレーターv5.8", layout="wide")
+st.set_page_config(page_title="最適容量シミュレーター", layout="wide")
 st.title("🌱 再エネ・蓄電池 最適容量シミュレーター")
 
 with st.sidebar:
@@ -199,19 +198,19 @@ with st.sidebar:
     dep_years = st.selectbox("償却期間 (年)", [1, 7, 10, 17], index=3)
     tax_rate = st.number_input("法人実効税率 (%)", value=30.0, step=1.0)
     
-    st.subheader("4. 事業計画の評価期間")
-    years = st.slider("シミュレーション期間 (年)", 10, 30, 20, help="短く設定するほど初期費用が抑えられ、投資回収が早くなる傾向があります。")
-    if years <= 15:
-        st.success("💡 **【短期回収重視】**\n初期費用が抑えられ、**投資回収年数が短くなる**構成が算出されやすくなります。")
-    elif years >= 25:
-        st.warning("💡 **【長期利益重視】**\n回収には時間がかかりますが、**トータルの電気代削減額が大きくなる**構成が算出されやすくなります。")
+    st.subheader("4. 投資回収の目標ライン（重要）")
+    target_payback = st.slider("目標とする回収年数 (年)", 5, 20, 10, help="この年数以内に初期費用を回収できる範囲で、最も30年間の利益が大きくなるサイズをAIが計算します。")
+    if target_payback <= 8:
+        st.success("💡 **【安全・短期回収プラン】**\n確実性を最優先し、初期費用を抑えた手堅い設備サイズが提案されます。")
+    elif target_payback >= 15:
+        # 💡 ここを汎用表現に修正！
+        st.warning("💡 **【利益最大化・攻めのプラン】**\n回収には少し時間がかかりますが、施設のポテンシャルを最大限に活かして30年後に莫大な利益を生む特大サイズが提案されます。")
     else:
-        st.info("💡 **【バランス型】**\n基準となる20年で、**投資回収の早さとトータル削減額のバランスを取った**構成が算出されます。")
+        st.info("💡 **【バランス型プラン】**\n稟議を通しやすい回収年数と、将来の大きな利益を両立する標準的なサイズが提案されます。")
     
-    st.subheader("5. 将来の維持・廃棄コスト")
+    st.subheader("5. 将来の維持・交換・廃棄コスト")
+    st.info("💡 以下のリアルな劣化・交換費用が自動計算されます。\n・太陽光パネル: 年0.4%劣化\n・蓄電池: 年2.0%劣化 (買替なし)\n・パワコン交換: 11年目と21年目に 1万円/kW")
     om_rate_input = st.number_input("年間O&M費用 (初期費用の%)", value=0.0, step=0.1)
-    pcs_rate_input = st.number_input("パワコン交換費用 (初期費用の%)", value=0.0, step=1.0)
-    pcs_year_input = st.number_input("パワコン交換時期 (年目)", value=0, step=1)
     disp_rate_input = st.number_input("産廃・廃棄費用 (初期費用の%)", value=0.0, step=0.5)
 
     st.subheader("6. 詳細な制約条件（オプション）")
@@ -230,9 +229,6 @@ with st.sidebar:
     use_min_reduction_amount = st.checkbox("💴 目標の電気代削減額をクリアする")
     min_reduction_amount_man = st.number_input("最低目標削減額 (万円/年)", value=100.0, step=10.0) if use_min_reduction_amount else None
 
-    use_max_payback = st.checkbox("⏳ 目標の投資回収年数をクリアする")
-    max_payback_years = st.number_input("目標回収年数 (年以内)", value=10, step=1, min_value=1, max_value=30) if use_max_payback else None
-
     use_max_loss_rate = st.checkbox("⚠️ 発電ロス率（捨てる電気）の上限を設ける")
     max_loss_rate = st.number_input("上限ロス率 (%)", value=10.0, step=1.0, min_value=0.0, max_value=100.0) if use_max_loss_rate else None
 
@@ -240,14 +236,15 @@ params = {
     'cost_pv_gross': cost_pv_man * 10000, 'cost_bat_gross': cost_bat_man * 10000,
     'cost_pv_net': (cost_pv_man - sub_pv_man) * 10000, 'cost_bat_net': (cost_bat_man - sub_bat_man) * 10000,
     'price_base': price_base, 'surcharge': surcharge, 'adj_fuel': adj_fuel,
-    'years': years, 'dep_years': dep_years, 'tax_rate': tax_rate / 100.0,
+    'dep_years': dep_years, 'tax_rate': tax_rate / 100.0,
     'eff_charge': 0.95, 'eff_discharge': 0.95,
-    'om_rate': om_rate_input / 100.0, 'pcs_rate': pcs_rate_input / 100.0,
-    'pcs_year': int(pcs_year_input), 'disp_rate': disp_rate_input / 100.0,
+    'om_rate': om_rate_input / 100.0, 'disp_rate': disp_rate_input / 100.0,
+    'bat_deg_rate': 0.02,
+    'target_payback': target_payback,
     'fix_pv_kw': fix_pv_kw, 'fix_bat_kwh': fix_bat_kwh,
     'max_capex_man': max_capex_man, 'min_reduction_rate': min_reduction_rate,
     'min_reduction_amount_man': min_reduction_amount_man,
-    'max_payback_years': max_payback_years, 'max_loss_rate': max_loss_rate
+    'max_loss_rate': max_loss_rate
 }
 
 # ==========================================
@@ -367,8 +364,8 @@ if demand_file:
                 results, prob = optimize_system(df, params)
                 
             if results['Status'] == 'Infeasible':
-                st.error("❌ 【解なし】指定された制約条件が厳しすぎます。")
-                st.warning("我がシミュレーションに一片の悔いなし！！—— AIが計算の限界を超えて力尽きました。サイドバーの条件を少し緩めて再度お試しください。")
+                st.error(f"❌ 【解なし】指定された条件（{params['target_payback']}年以内に回収するなど）が厳しすぎます。")
+                st.warning("我がシミュレーションに一片の悔いなし！！—— AIが計算の限界を超えて力尽きました。サイドバーの目標回収年数を少し伸ばすなど、条件を緩めて再度お試しください。")
             elif results['Status'] == 'Optimal':
                 st.markdown("---")
                 opt_pv = results['Optimal_PV_kW']
@@ -385,6 +382,7 @@ if demand_file:
                 e_buy_yr1 = sum((var_dict[f'E_buy_{t}'].varValue or 0.0) for t in range(len(df)))
                 e_pv_use_yr1 = sum((var_dict[f'E_pv_use_{t}'].varValue or 0.0) for t in range(len(df)))
                 e_charge_yr1 = sum((var_dict[f'E_charge_{t}'].varValue or 0.0) for t in range(len(df)))
+                e_discharge_yr1 = sum((var_dict[f'E_discharge_{t}'].varValue or 0.0) for t in range(len(df)))
                 
                 cost_with_yr1 = e_buy_yr1 * price_unit
                 savings_yr1 = cost_without_yr1 - cost_with_yr1
@@ -407,7 +405,7 @@ if demand_file:
                 deps_net = calc_depreciation_200db(capex_net, params['dep_years'])
                 
                 om_cost = capex_gross * params['om_rate']
-                pcs_cost = capex_gross * params['pcs_rate']
+                pcs_cost_yr = opt_pv * 10000
                 disp_cost = capex_gross * params['disp_rate']
                 disp_year = 30 
                 
@@ -415,12 +413,15 @@ if demand_file:
                 cf_summary = []
                 
                 for y in range(1, 31):
-                    deg_loss_kwh = annual_gen_yr1 * 0.004 * (y - 1)
-                    gen_y = annual_gen_yr1 - deg_loss_kwh
-                    savings_y = savings_yr1 - (deg_loss_kwh * price_unit)
+                    deg_loss_pv_kwh = annual_gen_yr1 * 0.004 * (y - 1)
+                    deg_loss_bat_kwh = e_discharge_yr1 * params['bat_deg_rate'] * (y - 1)
+                    
+                    gen_y = annual_gen_yr1 - deg_loss_pv_kwh
+                    savings_y = savings_yr1 - (deg_loss_pv_kwh + deg_loss_bat_kwh) * price_unit
                     
                     cost_y = om_cost
-                    if y == params['pcs_year']: cost_y += pcs_cost
+                    # 💡 パワコン交換を 11年目・21年目 に修正！
+                    if y in [11, 21]: cost_y += pcs_cost_yr
                     if y == disp_year: cost_y += disp_cost
                     
                     tax_shield_gross = (deps_gross[y-1] + cost_y) * params['tax_rate']
@@ -435,8 +436,8 @@ if demand_file:
                     cf_summary.append({
                         "経過年数(年)": y,
                         "想定発電量_経年劣化後(kWh)": round(gen_y),
-                        "電気代削減額(円)": round(savings_y),
-                        "維持メンテ・廃棄経費(円)": round(cost_y),
+                        "電気代削減額_劣化加味(円)": round(savings_y),
+                        "維持メンテ・交換・廃棄経費(円)": round(cost_y),
                         "減価償却費_補助金あり適用(円)": round(deps_net[y-1]),
                         "節税効果_補助金あり(円)": round(tax_shield_net),
                         "単年キャッシュフロー_補助金あり(円)": round(savings_y - cost_y + tax_shield_net),
@@ -451,7 +452,7 @@ if demand_file:
                 pb_gross = get_payback_years(capex_gross, cf_gross)
                 pb_str_gross = f"約 {pb_gross:.1f} 年" if pb_gross is not None else "30年超 (回収不可)"
                 
-                # ==== 💡 項目名を省略なしで完全復活 ＋ 不要な矢印なし ＋ スペース排除で改行防止 ====
+                # ==== 結果表示 ====
                 st.header("📊 システム構成と年間発電量")
                 c1, c2, c3, c4, c5 = st.columns(5)
                 c1.metric("🏭 年間消費電力", f"{annual_demand_kwh:,.0f}kWh")
@@ -471,15 +472,18 @@ if demand_file:
                 
                 st.markdown("---")
                 st.header("🔧 将来の維持管理・廃棄コスト (目安)")
-                st.info("※設備本体総額(グロス)を基準に算出。これらのコストは全て下記の回収シミュレーションのマイナス要素として計算済です。")
+                st.info("※これら将来の経費は全て、下記の回収シミュレーションのマイナス要素として計算済です。")
                 o1, o2, o3 = st.columns(3)
                 o1.metric("🛠 年間O&M費用", f"約{om_cost/10000:,.0f}万円/年", f"初期総額の{params['om_rate']*100:.1f}%")
-                o2.metric(f"🔄 パワコン交換 ({params['pcs_year']}年目)", f"約{pcs_cost/10000:,.0f}万円", f"初期総額の{params['pcs_rate']*100:.1f}%")
-                o3.metric(f"🗑 産廃・廃棄 ({disp_year}年目)", f"約{disp_cost/10000:,.0f}万円", f"初期総額の{params['disp_rate']*100:.1f}%")
+                # 💡 11年目・21年目に修正！
+                o2.metric("🔄 パワコン交換(11・21年目)", f"約{pcs_cost_yr/10000:,.0f}万円/回", "1万円/kWで計算")
+                o3.metric(f"🗑 産 পাশে・廃棄({disp_year}年目)", f"約{disp_cost/10000:,.0f}万円", f"初期総額の{params['disp_rate']*100:.1f}%")
 
                 st.markdown("---")
                 st.header("📈 投資回収シミュレーション (補助金 あり/なし 比較)")
-                st.info(f"※経年劣化（年0.4%低下）、維持管理費・廃棄費、および{params['dep_years']}年間の200%定率法による減価償却（法人税{params['tax_rate']*100:.0f}%）をすべて考慮した手残り現金(累計)です。")
+                st.info(f"※太陽光と蓄電池の年次劣化、パワコン交換、廃棄経費、および{params['dep_years']}年間の200%定率法による減価償却（法人税{params['tax_rate']*100:.0f}%）をすべて考慮した手残り現金(累計)です。")
+                
+                y_target = params['target_payback']
                 
                 col_left, col_right = st.columns(2)
                 with col_left:
@@ -487,44 +491,48 @@ if demand_file:
                     st.metric("初期投資額 (実質)", f"{capex_net/10000:,.0f} 万円")
                     st.metric("🎯 投資回収年数", pb_str_net)
                     st.markdown("##### 累計回収額・回収率")
-                    roi_7_net = (cf_net[6] / capex_net * 100) if capex_net > 0 else 0
-                    roi_20_net = (cf_net[19] / capex_net * 100) if capex_net > 0 else 0
+                    
+                    roi_5_net = (cf_net[4] / capex_net * 100) if capex_net > 0 else 0
+                    roi_target_net = (cf_net[y_target-1] / capex_net * 100) if capex_net > 0 else 0
                     roi_30_net = (cf_net[29] / capex_net * 100) if capex_net > 0 else 0
-                    st.write(f"**7年後:** {cf_net[6]/10000:,.0f} 万円 (回収率: {roi_7_net:,.0f}%)")
-                    st.write(f"**20年後:** {cf_net[19]/10000:,.0f} 万円 (回収率: {roi_20_net:,.0f}%)")
-                    st.write(f"**30年後:** {cf_net[29]/10000:,.0f} 万円 (回収率: {roi_30_net:,.0f}%)")
+                    
+                    st.write(f"**5年後:** {cf_net[4]/10000:,.0f} 万円 (回収率: {roi_5_net:,.0f}%)")
+                    st.write(f"**目標({y_target}年後):** {cf_net[y_target-1]/10000:,.0f} 万円 (回収率: {roi_target_net:,.0f}%)")
+                    st.write(f"**最終(30年後):** {cf_net[29]/10000:,.0f} 万円 (回収率: {roi_30_net:,.0f}%)")
                 
                 with col_right:
                     st.subheader("🔴 補助金【なし】の場合")
                     st.metric("初期投資額 (全額自己負担)", f"{capex_gross/10000:,.0f} 万円")
                     st.metric("🎯 投資回収年数", pb_str_gross)
                     st.markdown("##### 累計回収額・回収率")
-                    roi_7_gross = (cf_gross[6] / capex_gross * 100) if capex_gross > 0 else 0
-                    roi_20_gross = (cf_gross[19] / capex_gross * 100) if capex_gross > 0 else 0
+                    
+                    roi_5_gross = (cf_gross[4] / capex_gross * 100) if capex_gross > 0 else 0
+                    roi_target_gross = (cf_gross[y_target-1] / capex_gross * 100) if capex_gross > 0 else 0
                     roi_30_gross = (cf_gross[29] / capex_gross * 100) if capex_gross > 0 else 0
-                    st.write(f"**7年後:** {cf_gross[6]/10000:,.0f} 万円 (回収率: {roi_7_gross:,.0f}%)")
-                    st.write(f"**20年後:** {cf_gross[19]/10000:,.0f} 万円 (回収率: {roi_20_gross:,.0f}%)")
-                    st.write(f"**30年後:** {cf_gross[29]/10000:,.0f} 万円 (回収率: {roi_30_gross:,.0f}%)")
+                    
+                    st.write(f"**5年後:** {cf_gross[4]/10000:,.0f} 万円 (回収率: {roi_5_gross:,.0f}%)")
+                    st.write(f"**目標({y_target}年後):** {cf_gross[y_target-1]/10000:,.0f} 万円 (回収率: {roi_target_gross:,.0f}%)")
+                    st.write(f"**最終(30年後):** {cf_gross[29]/10000:,.0f} 万円 (回収率: {roi_30_gross:,.0f}%)")
 
-                # --- 💡 10年・20年・30年の比較シミュレーション ---
+                # --- 💡 新・比較表（回収年数ベース） ---
                 st.markdown("---")
-                st.header("👑 【決裁者向け】評価期間別・最適化プラン比較表")
-                st.info("「10年(短期)」「20年(標準)」「30年(長期)」それぞれの期間で利益が最大になるよう、AIが別々に計算した3つの最適プランの比較です。")
+                st.header("👑 【決裁者向け】目標回収年数別・最適化プラン比較表")
+                st.info("御社の稟議ルール（回収目標）の厳しさに合わせて、3パターンの投資規模を比較しています。すべて「30年後の利益が最大」になるよう計算されています。")
 
                 comp_data = []
-                for test_y in [10, 20, 30]:
+                for test_y, plan_name in zip([7, 10, 15], ["安全プラン", "標準プラン", "攻めプラン"]):
                     p_test = params.copy()
-                    p_test['years'] = test_y
+                    p_test['target_payback'] = test_y
                     
-                    if test_y == params['years']:
+                    if test_y == params['target_payback']:
                         comp_data.append({
-                            "評価プラン": f"【{test_y}年】最大化プラン",
+                            "評価プラン": f"【回収 {test_y}年】{plan_name}",
                             "最適パネル容量": f"{opt_pv:,.1f} kW",
                             "最適蓄電池容量": f"{opt_bat:,.1f} kWh",
                             "初期投資額(実質)": f"{capex_net/10000:,.0f} 万円",
                             "初年度削減額": f"{savings_yr1/10000:,.0f} 万円",
                             "投資回収年数": pb_str_net,
-                            f"評価年次の累計利益": f"{cf_net[test_y-1]/10000:,.0f} 万円"
+                            f"最終利益(30年後)": f"{cf_net[29]/10000:,.0f} 万円"
                         })
                     else:
                         res_test, prob_test = optimize_system(df, p_test)
@@ -537,21 +545,27 @@ if demand_file:
                             buy_t = sum((v_dict[f'E_buy_{t}'].varValue or 0.0) for t in range(len(df)))
                             sav_t = cost_without_yr1 - (buy_t * price_unit)
                             gen_yr1_t = df['PV_Gen_1kW_kWh'].sum() * pv_t
+                            e_dis_yr1_t = sum((v_dict[f'E_discharge_{t}'].varValue or 0.0) for t in range(len(df)))
                             
                             deps_n_t = calc_depreciation_200db(capex_n_t, p_test['dep_years'])
                             capex_g_t = p_test['cost_pv_gross'] * pv_t + p_test['cost_bat_gross'] * bat_t
+                            
                             om_c = capex_g_t * p_test['om_rate']
-                            pcs_c = capex_g_t * p_test['pcs_rate']
+                            pcs_c_t = pv_t * 10000
                             disp_c = capex_g_t * p_test['disp_rate']
                             
                             cf_n_list = []
                             cum_n_t = 0
                             for y in range(1, 31):
-                                loss_k = gen_yr1_t * 0.004 * (y - 1)
-                                sav_y = sav_t - (loss_k * price_unit)
+                                loss_pv_k = gen_yr1_t * 0.004 * (y - 1)
+                                loss_bat_k = e_dis_yr1_t * p_test['bat_deg_rate'] * (y - 1)
+                                sav_y = sav_t - (loss_pv_k + loss_bat_k) * price_unit
+                                
                                 c_y = om_c
-                                if y == p_test['pcs_year']: c_y += pcs_c
+                                # 💡 11年目・21年目に修正！
+                                if y in [11, 21]: c_y += pcs_c_t
                                 if y == 30: c_y += disp_c
+                                
                                 tax_s = (deps_n_t[y-1] + c_y) * p_test['tax_rate']
                                 cum_n_t += (sav_y - c_y + tax_s)
                                 cf_n_list.append(cum_n_t)
@@ -560,23 +574,23 @@ if demand_file:
                             pb_str_t = f"約 {pb_t:.1f} 年" if pb_t is not None else "回収不可"
                             
                             comp_data.append({
-                                "評価プラン": f"【{test_y}年】最大化プラン",
+                                "評価プラン": f"【回収 {test_y}年】{plan_name}",
                                 "最適パネル容量": f"{pv_t:,.1f} kW",
                                 "最適蓄電池容量": f"{bat_t:,.1f} kWh",
                                 "初期投資額(実質)": f"{capex_n_t/10000:,.0f} 万円",
                                 "初年度削減額": f"{sav_t/10000:,.0f} 万円",
                                 "投資回収年数": pb_str_t,
-                                f"評価年次の累計利益": f"{cf_n_list[test_y-1]/10000:,.0f} 万円"
+                                f"最終利益(30年後)": f"{cf_n_list[29]/10000:,.0f} 万円"
                             })
                         else:
                             comp_data.append({
-                                "評価プラン": f"【{test_y}年】最大化プラン",
+                                "評価プラン": f"【回収 {test_y}年】{plan_name}",
                                 "最適パネル容量": "解なし",
                                 "最適蓄電池容量": "-",
                                 "初期投資額(実質)": "-",
                                 "初年度削減額": "-",
                                 "投資回収年数": "-",
-                                f"評価年次の累計利益": "-"
+                                f"最終利益(30年後)": "-"
                             })
 
                 st.table(pd.DataFrame(comp_data).set_index("評価プラン"))
@@ -587,13 +601,12 @@ if demand_file:
                 csv_data = df_cf_export.to_csv(index=False, encoding='utf-8-sig').encode('utf-8-sig')
                 
                 st.download_button(
-                    label="📊 30年間のキャッシュフロー表をCSVでダウンロード",
+                    label="📊 30年間のキャッシュフロー表(劣化加味版)をCSVでダウンロード",
                     data=csv_data,
-                    file_name="simulation_cashflow.csv",
+                    file_name="simulation_cashflow_30years.csv",
                     mime="text/csv",
                     type="primary"
                 )
 
             else:
                 st.error("最適化中に予期せぬエラーが発生しました。条件を見直してください。")
-
