@@ -477,7 +477,7 @@ if demand_file:
                 o1.metric("🛠 年間O&M費用", f"約{om_cost/10000:,.0f}万円/年", f"初期総額の{params['om_rate']*100:.1f}%")
                 # 💡 11年目・21年目に修正！
                 o2.metric("🔄 パワコン交換(11・21年目)", f"約{pcs_cost_yr/10000:,.0f}万円/回", "1万円/kWで計算")
-                o3.metric(f"🗑 産 পাশে・廃棄({disp_year}年目)", f"約{disp_cost/10000:,.0f}万円", f"初期総額の{params['disp_rate']*100:.1f}%")
+                o3.metric(f"🗑 産廃・廃棄({disp_year}年目)", f"約{disp_cost/10000:,.0f}万円", f"初期総額の{params['disp_rate']*100:.1f}%")
 
                 st.markdown("---")
                 st.header("📈 投資回収シミュレーション (補助金 あり/なし 比較)")
